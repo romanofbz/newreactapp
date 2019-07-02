@@ -6,4 +6,4 @@ before_install:
   - docker build -t romanofbz/newreactapp -f Dockerfile.dev .
 
 script: 
-  - docker run romanofbz/newreactapp npm run test -- --coverage
+  - docker run -e CI=true romanofbz/newreactapp npm run test -- --coverage
